@@ -1,0 +1,12 @@
+.vh-80 {
+    height: 80vh;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .vh-80 {
+        height: none
+    }
+
+}

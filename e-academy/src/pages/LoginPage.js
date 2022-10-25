@@ -29,14 +29,14 @@ const LoginPage = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.error(errorMessage);
+                console.error(error);
 
             });
     }
     return (
         <Container>
-            <Row className="vh-100 justify-content-md-center align-items-center">
-                <Col md="4">
+            <Row className="vh-80  align-items-center my-5 justify-content-md-center">
+                <Col lg="4">
                     <Card className='shadow-lg text-center'>
                         <Card.Body>
                             <h3 className='t-primary qt-hero mb-5'>Login</h3>
@@ -66,7 +66,7 @@ const LoginPage = () => {
                                     </Button>
                                 </div>
 
-                                <p>Don't  have an account Please <Link className='text-decoration-none text-secondary' to='/register'>Register</Link></p>
+                                <p>Don't  have an account Please <Link className='text-decoration-none text-info' to='/account/register'>Register</Link></p>
                                 <hr />
                                 <div className="mb-3">
                                     <Button variant="secondary" className='text-white' onClick={()=>handleProviderLogin(googleProvider)}>

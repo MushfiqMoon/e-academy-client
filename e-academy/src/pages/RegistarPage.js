@@ -18,7 +18,7 @@ const RegistarPage = () => {
     const googleProvider = new GoogleAuthProvider();
     const gitProvider = new GithubAuthProvider();
 
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin, createUser } = useContext(AuthContext);
 
     const handleProviderLogin = (provider) => {
         providerLogin(provider)
@@ -29,35 +29,57 @@ const RegistarPage = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.error(errorMessage);
+                console.error(error);
 
             });
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.userName.value;
+        const photoURL = form.photoURL.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log('first', name, photoURL, email, password)
+
+
+        createUser(email, password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                console.error(error);
+
+            });
+    }
 
     return (
         <Container>
-            <Row className="vh-100 justify-content-md-center align-items-center">
-                <Col md="4">
+            <Row className="vh-80 align-items-center my-5 justify-content-md-center">
+                <Col lg="4">
                     <Card className='shadow-lg text-center'>
                         <Card.Body>
                             <h3 className='t-primary qt-hero mb-5'>Register</h3>
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <Form.Floating className="mb-3">
                                     <Form.Control
                                         id="floatingFullName"
-                                        type="email"
+                                        type="text"
                                         placeholder="name@example.com"
-                                        name="email"
+                                        name="userName"
                                     />
                                     <label htmlFor="floatingFullName">Full name</label>
                                 </Form.Floating>
                                 <Form.Floating className="mb-3">
                                     <Form.Control
                                         id="floatingPhotoUrl"
-                                        type="email"
+                                        type="text"
                                         placeholder="name@example.com"
-                                        name="email"
+                                        name="photoURL"
                                     />
                                     <label htmlFor="floatingPhotoUrl">Photo URL</label>
                                 </Form.Floating>
@@ -82,21 +104,22 @@ const RegistarPage = () => {
 
                                 <div className="d-grid gap-2 d-md-flex justify-content-center mb-3">
                                     <Button variant="outline-secondary" type="submit">
-                                        Login
-                                    </Button>
-                                </div>
-
-                                <p>Don't  have an account Please <Link className='text-decoration-none text-secondary' to='/register'>Register</Link></p>
-                                <hr />
-                                <div className="mb-3">
-                                    <Button variant="secondary" className='text-white' onClick={() => handleProviderLogin(googleProvider)}>
-                                        <FaGoogle />
-                                    </Button>
-                                    <Button variant="secondary" className='text-white mx-2' onClick={() => handleProviderLogin(gitProvider)}>
-                                        <FaGithub />
+                                        Register
                                     </Button>
                                 </div>
                             </Form>
+                            <p>Already have an account, Please <Link className='text-decoration-none text-info' to='/account/login'>Log In</Link></p>
+                            <hr />
+                            <p>Or Sign in with</p>
+                            <div className="mb-3">
+                                <Button variant="secondary" className='text-white' onClick={() => handleProviderLogin(googleProvider)}>
+                                    <FaGoogle />
+                                </Button>
+                                <Button variant="secondary" className='text-white mx-2' onClick={() => handleProviderLogin(gitProvider)}>
+                                    <FaGithub />
+                                </Button>
+                            </div>
+
                         </Card.Body>
 
                     </Card>
