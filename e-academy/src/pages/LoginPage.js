@@ -18,8 +18,31 @@ const LoginPage = () => {
     const googleProvider = new GoogleAuthProvider();
     const gitProvider = new GithubAuthProvider();
 
-    const { providerLogin } = useContext(AuthContext);
+    const { providerLogin, signIn } = useContext(AuthContext);
 
+    // user and password loing 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+
+        signIn(email, password)
+            .then((result) => {
+                const user = result.user;
+                console.log(user)
+                form.reset()
+
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                console.error(error);
+
+            });
+    }
+
+    // github and gmail login 
     const handleProviderLogin = (provider) => {
         providerLogin(provider)
             .then((result) => {
@@ -40,7 +63,7 @@ const LoginPage = () => {
                     <Card className='shadow-lg text-center'>
                         <Card.Body>
                             <h3 className='t-primary qt-hero mb-5'>Login</h3>
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <Form.Floating className="mb-3">
                                     <Form.Control
                                         id="floatingInputCustom"
@@ -65,18 +88,18 @@ const LoginPage = () => {
                                         Login
                                     </Button>
                                 </div>
-
-                                <p>Don't  have an account Please <Link className='text-info' to='/account/register'>Register</Link></p>
-                                <hr />
-                                <div className="mb-3">
-                                    <Button variant="secondary" className='text-white' onClick={()=>handleProviderLogin(googleProvider)}>
-                                        <FaGoogle />
-                                    </Button>
-                                    <Button variant="secondary" className='text-white mx-2' onClick={()=>handleProviderLogin(gitProvider)}>
-                                        <FaGithub />
-                                    </Button>
-                                </div>
                             </Form>
+                            <p>Don't  have an account Please <Link className='text-info' to='/account/register'>Register</Link></p>
+                            <hr />
+                            <div className="mb-3">
+                                <Button variant="secondary" className='text-white' onClick={() => handleProviderLogin(googleProvider)}>
+                                    <FaGoogle />
+                                </Button>
+                                <Button variant="secondary" className='text-white mx-2' onClick={() => handleProviderLogin(gitProvider)}>
+                                    <FaGithub />
+                                </Button>
+                            </div>
+
                         </Card.Body>
 
                     </Card>

@@ -31,7 +31,6 @@ const Menubar = () => {
 
     }, [])
 
-    console.log(user)
 
     return (
         <>
@@ -73,7 +72,7 @@ const Menubar = () => {
                                                 width={'40px'}
                                                 title={user?.displayName}
                                                 alt={user?.displayName}
-                                                src={user?.photoURL ? user?.photoURL : 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png'}
+                                                src={user?.photoURL ? user?.photoURL : '/avater.jpg'}
                                             />
                                         </li>
                                     </>
