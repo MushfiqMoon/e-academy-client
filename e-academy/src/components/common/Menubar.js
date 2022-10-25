@@ -1,18 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
     Container,
     Navbar,
     NavDropdown,
     Nav,
+    Image,
 } from 'react-bootstrap'
 import DarkModeToggle from "react-dark-mode-toggle";
 import { Link, NavLink, } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider';
 
 const Menubar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
 
     const [isDarkMode, setIsDarkMode] = useState(() => false);
 
     const [categories, setCategories] = useState([])
+
+    const handleLogout = () => {
+        logOut()
+        .then(() => {})
+        .catch((error) => console.error(error));
+    }
 
     useEffect(() => {
         fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/categories`)
@@ -20,6 +30,8 @@ const Menubar = () => {
             .then(data => setCategories(data))
 
     }, [])
+
+    console.log(user)
 
     return (
         <>
@@ -48,9 +60,29 @@ const Menubar = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to='/blog'>Blog</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to='/account/login'>Login</NavLink>
-                            </li>
+                            {
+                                user?.uid ?
+                                    <>
+                                        <li className="nav-item">
+                                            <button style={{border:"none"}} onClick={handleLogout} className="nav-link" >Log Out</button>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Image
+                                                roundedCircle
+                                                className='border border-dark border-4'
+                                                width={'40px'}
+                                                title={user?.displayName}
+                                                alt={user?.displayName}
+                                                src={user?.photoURL ? user?.photoURL : 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png'}
+                                            />
+                                        </li>
+                                    </>
+                                    :
+                                    <li className="nav-item">
+                                        <NavLink className="nav-link" to='/account/login'>Login</NavLink>
+                                    </li>
+                            }
+
                             <Nav.Link>
                                 <DarkModeToggle
                                     onChange={setIsDarkMode}
