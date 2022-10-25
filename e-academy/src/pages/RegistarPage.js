@@ -108,7 +108,7 @@ const RegistarPage = () => {
                                     </Button>
                                 </div>
                             </Form>
-                            <p>Already have an account, Please <Link className='text-decoration-none text-info' to='/account/login'>Log In</Link></p>
+                            <p>Already have an account, Please <Link className='text-info' to='/account/login'>Log In</Link></p>
                             <hr />
                             <p>Or Sign in with</p>
                             <div className="mb-3">

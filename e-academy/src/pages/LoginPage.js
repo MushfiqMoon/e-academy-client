@@ -66,7 +66,7 @@ const LoginPage = () => {
                                     </Button>
                                 </div>
 
-                                <p>Don't  have an account Please <Link className='text-decoration-none text-info' to='/account/register'>Register</Link></p>
+                                <p>Don't  have an account Please <Link className='text-info' to='/account/register'>Register</Link></p>
                                 <hr />
                                 <div className="mb-3">
                                     <Button variant="secondary" className='text-white' onClick={()=>handleProviderLogin(googleProvider)}>

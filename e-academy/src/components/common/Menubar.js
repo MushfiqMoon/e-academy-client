@@ -19,7 +19,7 @@ const Menubar = () => {
 
             <Navbar collapseOnSelect expand="lg" bg="secondary" variant="dark">
                 <Container>
-                    <Link href="#home" className='text-white fw-bold text-decoration-none'><img src="/logo.png" alt="e-academy" style={{ width: '50px' }} /> E-Academy</Link>
+                    <Link to="/" className='text-white fw-bold'><img src="/logo.png" alt="e-academy" style={{ width: '50px' }} /> E-Academy</Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto">
