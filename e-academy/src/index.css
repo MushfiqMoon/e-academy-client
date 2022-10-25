@@ -25,6 +25,12 @@ a {
   height: 80vh;
 }
 
-.btn-secondary{
+.btn-secondary {
   background-color: var(--primary) !important;
+  border: none !important;
+  padding: 10px 15px !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary) !important;
 }

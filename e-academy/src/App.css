@@ -10,7 +10,7 @@ nav.navbar.navbar-light {
 }
 
 #basic-nav-dropdown {
-    color: var(--neutral)!important;
+    color: var(--neutral) !important;
 }
 
 .nav-link {
@@ -26,6 +26,9 @@ nav.navbar.navbar-light {
 .dropdown-item {
     font-size: 18px;
 }
+.dropdown-menu.show {
+    z-index: 9999;
+}
 
 .dropdown-item.active,
 .dropdown-item:active {
@@ -33,11 +36,12 @@ nav.navbar.navbar-light {
     color: var(--accent) !important;
 }
 
+/* Mini Hero  */
 .hero-title {
-    /* color: var(--secondary); */
     color: var(--primary);
 }
 
+/* Course Area  */
 .course-card-footer.card-footer {
     background-color: var(--neutral) !important;
     color: var(--gray) !important;
@@ -47,11 +51,45 @@ nav.navbar.navbar-light {
     color: var(--accent);
 }
 
-
+/* Blog section  */
 .accordion-button:not(.collapsed) {
     color: var(--accent) !important;
     background-color: var(--neutral) !important;
 }
+
+/* Sidebar  */
+.sidebar {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/* scrollbar  */
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+.sidebar-list {
+    display: block;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 10px;
+    color: var(--neutral);
+}
+
+.sidebar-list.active {
+    background: var(--primary);
+    color: var(--gray);
+}
+
+
 
 @media screen and (max-width: 992px) {
 
