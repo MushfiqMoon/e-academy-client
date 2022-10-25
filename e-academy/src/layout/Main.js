@@ -14,7 +14,7 @@ const Main = () => {
                     <Col lg={3}>
                         <Sidebar/>
                     </Col>
-                    <Col lg={9}>
+                    <Col lg={9} >
                         <Outlet/>
                     </Col>
                 </Row>

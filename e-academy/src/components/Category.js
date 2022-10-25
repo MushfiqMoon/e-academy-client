@@ -4,12 +4,12 @@ import { useLoaderData } from 'react-router-dom'
 import CourseThumb from './common/CourseThumb'
 
 const Category = () => {
-    
+
     const allCourses = useLoaderData()
 
     return (
-        <Container>
-            <Row className='mt-5'>
+        <Container className='vh-80 mt-5'>
+            <Row className='mb-5'>
                 {
                     allCourses.map(courses => <CourseThumb key={courses.id} courses={courses} />)
                 }

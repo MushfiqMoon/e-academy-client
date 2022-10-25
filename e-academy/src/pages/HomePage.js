@@ -15,8 +15,8 @@ const HomePage = () => {
 
     return (
         <>
-            <Container>
-                <Row className='mt-5'>
+            <Container className='mt-5'>
+                <Row className='mb-5'>
                     {
                         allCourses.map(courses => <CourseThumb key={courses.id} courses={courses} />)
                     }

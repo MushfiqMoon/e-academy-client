@@ -1,7 +1,57 @@
-.vh-80 {
-    height: 80vh;
+/* MenuBar */
+nav.navbar.navbar-light {
+    background: var(--gray) !important;
 }
 
+.logo {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#basic-nav-dropdown {
+    color: var(--neutral)!important;
+}
+
+.nav-link {
+    font-weight: bold !important;
+    color: var(--primary) !important;
+    font-size: 18px !important;
+}
+
+.nav-link.active {
+    color: var(--secondary) !important;
+}
+
+.dropdown-item {
+    font-size: 18px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--primary) !important;
+    color: var(--accent) !important;
+}
+
+.hero-title {
+    /* color: var(--secondary); */
+    color: var(--primary);
+}
+
+.course-card-footer.card-footer {
+    background-color: var(--neutral) !important;
+    color: var(--gray) !important;
+}
+
+.duration {
+    color: var(--accent);
+}
+
+
+.accordion-button:not(.collapsed) {
+    color: var(--accent) !important;
+    background-color: var(--neutral) !important;
+}
 
 @media screen and (max-width: 992px) {
 

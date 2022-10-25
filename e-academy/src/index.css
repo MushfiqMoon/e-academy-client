@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
+/* GLOBAL */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -7,15 +8,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --gray: #f2f2f2;
+  --neutral: #3d4451;
+  --primary: #570df8;
+  --secondary: #f000b8;
+  --accent: #37cdbe;
+
+}
+
 a {
   text-decoration: none !important;
 }
 
-/* p,
-div,
-a {
-  color: red !important;
-} */
-body{
-  background-color: red !important;
+.vh-80 {
+  height: 80vh;
+}
+
+.btn-secondary{
+  background-color: var(--primary) !important;
 }
