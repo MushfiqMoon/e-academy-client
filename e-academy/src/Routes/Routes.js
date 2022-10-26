@@ -4,11 +4,14 @@ import Courses from "../components/Courses";
 import Account from "../layout/Account";
 import Main from "../layout/Main";
 import Blog from "../pages/Blog";
-import ErrorPage from "../pages/ErrorPage";
 import FAQs from "../pages/FAQs";
 import HomePage from "../pages/HomePage";
+import ErrorPage from "../pages/ErrorPage";
+import CoursesPage from "../pages/CoursesPage";
 import LoginPage from "../pages/LoginPage";
 import RegistarPage from "../pages/RegistarPage";
+import PrivetRoute from "./PrivetRoute";
+
 
 export const routes = createBrowserRouter([
     {
@@ -18,17 +21,12 @@ export const routes = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <HomePage />,
-                loader: () => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/courses/all`),
-            },
-            {
-                path: "/home",
-                element: <HomePage />,
+                element: <CoursesPage />,
                 loader: () => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/courses/all`),
             },
             {
                 path: "/courses",
-                element: <HomePage />,
+                element: <CoursesPage />,
                 loader: () => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/courses/all`),
             },
             {
@@ -38,7 +36,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/course/:id",
-                element: <Courses />,
+                element: <PrivetRoute><Courses /></PrivetRoute>,
                 loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/course/${params.id}`),
             },
             {
@@ -49,12 +47,16 @@ export const routes = createBrowserRouter([
         ]
     },
     {
+        path: "/home",
+        element: <HomePage />
+    },
+    {
         path: "blog",
         element: <Blog />,
     },
     {
         path: "faq",
-        element: <FAQs/>,
+        element: <FAQs />,
     },
     {
         path: "account",

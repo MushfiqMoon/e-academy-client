@@ -9,11 +9,15 @@ import {
     Card,
 } from 'react-bootstrap';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
+import toast from 'react-hot-toast';
 
 const RegistarPage = () => {
 
+    // dynamic Route Link 
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/home';
     const navigate = useNavigate()
 
     // Provider
@@ -26,13 +30,15 @@ const RegistarPage = () => {
         providerLogin(provider)
             .then((result) => {
                 const user = result.user;
-                console.log(user)
+                // console.log(user)
+                toast.success('Login Successful');
                 navigate('/')
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.error(error);
+                // console.error(error);
+                toast.error(errorMessage);
 
             });
     }
@@ -52,12 +58,14 @@ const RegistarPage = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                
+                toast.success('Login Successful');
+                navigate(from, { replace: true });
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.error(error);
+                toast.error(errorMessage);
 
             });
     }
