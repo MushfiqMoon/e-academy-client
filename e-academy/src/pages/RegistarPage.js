@@ -24,20 +24,18 @@ const RegistarPage = () => {
     const googleProvider = new GoogleAuthProvider();
     const gitProvider = new GithubAuthProvider();
 
-    const { providerLogin, createUser } = useContext(AuthContext);
+    const { providerLogin, createUser, updateUserInfo } = useContext(AuthContext);
 
     const handleProviderLogin = (provider) => {
         providerLogin(provider)
             .then((result) => {
                 const user = result.user;
-                // console.log(user)
                 toast.success('Login Successful');
                 navigate('/')
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                // console.error(error);
                 toast.error(errorMessage);
 
             });
@@ -60,11 +58,27 @@ const RegistarPage = () => {
                 form.reset();
                 toast.success('Login Successful');
                 navigate(from, { replace: true });
+                handleUpdateUserProfile(name, photoURL);
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.error(error);
+                toast.error(errorMessage);
+
+            });
+    }
+
+
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+
+        updateUserInfo(profile)
+            .then(() => { })
+            .catch((error) => {
+                const errorMessage = error.message;
                 toast.error(errorMessage);
 
             });
