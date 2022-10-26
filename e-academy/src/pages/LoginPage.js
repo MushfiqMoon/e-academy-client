@@ -9,10 +9,13 @@ import {
     Card,
 } from 'react-bootstrap';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
+import toast from 'react-hot-toast';
 
 const LoginPage = () => {
+
+    const navigate = useNavigate()
 
     // Provider
     const googleProvider = new GoogleAuthProvider();
@@ -33,11 +36,14 @@ const LoginPage = () => {
                 const user = result.user;
                 console.log(user)
                 form.reset()
+                toast.success('Login Successful ');
+                navigate('/')
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.error(error);
+                // console.error(error);
+                toast.error(errorMessage);
 
             });
     }
@@ -48,11 +54,14 @@ const LoginPage = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
+                toast.success('Login Successful ');
+                navigate('/')
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.error(error);
+                // console.error(error);
+                toast.error(errorMessage);
 
             });
     }

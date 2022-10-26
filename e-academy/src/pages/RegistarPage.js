@@ -9,10 +9,12 @@ import {
     Card,
 } from 'react-bootstrap';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 
 const RegistarPage = () => {
+
+    const navigate = useNavigate()
 
     // Provider
     const googleProvider = new GoogleAuthProvider();
@@ -25,6 +27,7 @@ const RegistarPage = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user)
+                navigate('/')
 
             })
             .catch((error) => {
@@ -49,6 +52,7 @@ const RegistarPage = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                
 
             })
             .catch((error) => {

@@ -7,6 +7,7 @@ import {
     Image,
 } from 'react-bootstrap'
 import DarkModeToggle from "react-dark-mode-toggle";
+import toast from 'react-hot-toast';
 import { Link, NavLink, } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 
@@ -20,7 +21,9 @@ const Menubar = () => {
 
     const handleLogout = () => {
         logOut()
-        .then(() => {})
+        .then(() => {
+            toast.success('Logout');
+        })
         .catch((error) => console.error(error));
     }
 
