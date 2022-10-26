@@ -9,7 +9,7 @@ const Main = () => {
     return (
         <>
             <Menubar />
-            <Container>
+            <Container fluid>
                 <Row>
                     <Col lg={3}>
                         <Sidebar/>

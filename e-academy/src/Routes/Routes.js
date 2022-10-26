@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Category from "../components/Category";
 import Courses from "../components/Courses";
+import Checkout from "../components/Checkout";
 import Account from "../layout/Account";
 import Main from "../layout/Main";
 import Blog from "../pages/Blog";
@@ -36,7 +37,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: "/course/:id",
-                element: <PrivetRoute><Courses /></PrivetRoute>,
+                element: <Courses />,
                 loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/course/${params.id}`),
             },
             {
@@ -45,6 +46,12 @@ export const routes = createBrowserRouter([
             },
 
         ]
+    },
+    {
+        path: "/chekout/:id",
+        // element: <PrivetRoute><Checkout/></PrivetRoute>,
+        element: <Checkout/>,
+        loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/course/${params.id}`),
     },
     {
         path: "/home",

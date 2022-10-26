@@ -29,7 +29,6 @@ const RegistarPage = () => {
     const handleProviderLogin = (provider) => {
         providerLogin(provider)
             .then((result) => {
-                const user = result.user;
                 toast.success('Login Successful');
                 navigate('/')
 

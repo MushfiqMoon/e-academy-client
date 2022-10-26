@@ -7,7 +7,7 @@ const CourseThumb = ({ courses }) => {
     const { id, thumbnail_url, title, details, duration } = courses
 
     return (
-        <Col lg={4} md={6} className="mb-3 d-flex align-items-stretch">
+        <Col lg={3} md={4} className="mb-3 d-flex align-items-stretch">
             <Card>
                 <Card.Img variant="top" src={thumbnail_url} />
                 <Card.Body className='d-flex flex-column'>

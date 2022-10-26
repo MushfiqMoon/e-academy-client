@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import Footer from '../components/common/Footer'
 import Menubar from '../components/common/Menubar'
 import MiniHero from '../components/common/MiniHero'
