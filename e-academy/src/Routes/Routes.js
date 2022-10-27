@@ -49,8 +49,7 @@ export const routes = createBrowserRouter([
     },
     {
         path: "/chekout/:id",
-        // element: <PrivetRoute><Checkout/></PrivetRoute>,
-        element: <Checkout/>,
+        element: <PrivetRoute><Checkout/></PrivetRoute>,
         loader: ({ params }) => fetch(`https://b610-lerning-platform-server-side-mushfiq-moon.vercel.app/course/${params.id}`),
     },
     {

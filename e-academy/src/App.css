@@ -43,13 +43,11 @@ nav.navbar.navbar-light {
 
 /* Course Area  */
 .course-card-footer.card-footer {
-    background-color: var(--neutral) !important;
+    background-color: var(--primary) !important;
     color: var(--gray) !important;
 }
 
-.duration {
-    color: var(--accent);
-}
+
 
 /* Blog section  */
 .accordion-button:not(.collapsed) {

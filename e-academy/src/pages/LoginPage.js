@@ -36,8 +36,6 @@ const LoginPage = () => {
 
         signIn(email, password)
             .then((result) => {
-                const user = result.user;
-                console.log(user)
                 form.reset()
                 toast.success('Login Successful ');
                 navigate(from, {replace: true});
@@ -45,7 +43,6 @@ const LoginPage = () => {
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                // console.error(error);
                 toast.error(errorMessage);
 
             });
@@ -55,15 +52,12 @@ const LoginPage = () => {
     const handleProviderLogin = (provider) => {
         providerLogin(provider)
             .then((result) => {
-                const user = result.user;
-                console.log(user)
                 toast.success('Login Successful ');
                 navigate(from, {replace: true});
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                // console.error(error);
                 toast.error(errorMessage);
 
             });

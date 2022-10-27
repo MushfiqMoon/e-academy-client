@@ -12,7 +12,6 @@ const Courses = () => {
     const course = useLoaderData()
     const { id, title, thumbnail_url, price, duration, rating, total_view, details } = course
 
-    console.log(course)
     return (
         <>
 
