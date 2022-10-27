@@ -97,6 +97,7 @@ const RegistarPage = () => {
                                         type="text"
                                         placeholder="name@example.com"
                                         name="userName"
+                                        required
                                     />
                                     <label htmlFor="floatingFullName">Full name</label>
                                 </Form.Floating>
@@ -106,6 +107,7 @@ const RegistarPage = () => {
                                         type="text"
                                         placeholder="name@example.com"
                                         name="photoURL"
+                                        required
                                     />
                                     <label htmlFor="floatingPhotoUrl">Photo URL</label>
                                 </Form.Floating>
@@ -115,6 +117,7 @@ const RegistarPage = () => {
                                         type="email"
                                         placeholder="name@example.com"
                                         name="email"
+                                        required
                                     />
                                     <label htmlFor="floatingEmail">Email</label>
                                 </Form.Floating>
@@ -124,6 +127,7 @@ const RegistarPage = () => {
                                         type="password"
                                         placeholder="Password"
                                         name="password"
+                                        required
                                     />
                                     <label htmlFor="floatingPassword">Password</label>
                                 </Form.Floating>

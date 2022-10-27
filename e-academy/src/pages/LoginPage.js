@@ -75,6 +75,7 @@ const LoginPage = () => {
                                         type="email"
                                         placeholder="name@example.com"
                                         name="email"
+                                        required
                                     />
                                     <label htmlFor="floatingInputCustom">Email address</label>
                                 </Form.Floating>
@@ -84,6 +85,7 @@ const LoginPage = () => {
                                         type="password"
                                         placeholder="Password"
                                         name="password"
+                                        required
                                     />
                                     <label htmlFor="floatingPasswordCustom">Password</label>
                                 </Form.Floating>
