@@ -68,15 +68,16 @@ const Menubar = () => {
                                         <li className="nav-item">
                                             <button style={{border:"none"}} onClick={handleLogout} className="nav-link" >Log Out</button>
                                         </li>
-                                        <li className="nav-item">
+                                        <li className="nav-item tooltip-holder">
                                             <Image
                                                 roundedCircle
                                                 className='border border-dark border-4'
                                                 width={'40px'}
-                                                title={user?.displayName}
+                                                // title={user?.displayName}
                                                 alt='UN'
                                                 src={user?.photoURL ? user?.photoURL : '/avater.jpg'}
                                             />
+                                            <div className="tooltip-el">{user?.displayName}</div>
                                         </li>
                                     </>
                                     :

@@ -37,6 +37,24 @@ nav.navbar.navbar-light {
     color: var(--accent) !important;
 }
 
+.tooltip-holder {
+    position: relative;
+}
+
+.tooltip-el {
+    position: absolute;
+    background: #c9bdf9;
+    border-left: 2px solid #570df8;
+    padding: 2px 5px;
+    text-align: center;
+    width: 120px;
+    visibility: hidden;
+}
+
+.tooltip-holder:hover .tooltip-el {
+    visibility: visible;
+}
+
 /* Hero  */
 .ea-hero {
     background-color: #fef8ef;
