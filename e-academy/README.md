@@ -3,7 +3,7 @@
 E-Academy is an online Quality learning platform.
 
 ## Live Link
-Hosted in Firebase -> [E-Academy](https://google.com/)
+Hosted in Firebase -> [E-Academy](https://e-academy-ea184.web.app/home)
 
 ## E-Academy Key Features
 

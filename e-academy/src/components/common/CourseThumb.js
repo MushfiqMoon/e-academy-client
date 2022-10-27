@@ -21,10 +21,10 @@ const CourseThumb = ({ courses }) => {
 
                 </Card.Body>
                 <Card.Footer className='course-card-footer'>Duration: <span className='duration'>{duration}</span></Card.Footer>
-                {/* <div class="card-footer bg-transparent "></div> */}
-                {/* <div class="btn-group" role="group" aria-label="Basic example">
-                <span class="badge bg-secondary">New</span>
-                <span class="badge bg-secondary">New</span>
+                {/* <div className="card-footer bg-transparent "></div> */}
+                {/* <div className="btn-group" role="group" aria-label="Basic example">
+                <span className="badge bg-secondary">New</span>
+                <span className="badge bg-secondary">New</span>
                 </div> */}
             </Card>
         </Col>

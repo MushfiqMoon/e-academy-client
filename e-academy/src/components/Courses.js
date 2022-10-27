@@ -10,7 +10,7 @@ const ref = createRef();
 const Courses = () => {
 
     const course = useLoaderData()
-    const { id, title, thumbnail_url, price, duration, rating, total_view, details } = course
+    const { id, title, thumbnail_url, price, duration, rating, total_view, details, category_name } = course
 
     return (
         <>
@@ -20,15 +20,18 @@ const Courses = () => {
 
             <Container>
                 <Row>
-                    <Col lg={8}>
-                        <div className='mt-5' ref={ref}>
-                            <h3 className='fw-bold fs-2 mb-3'>Description</h3>
-                            <p className='fs-5'>{details}</p>
+                    {/* <div className="d-none"> */}
 
+                    {/* </div> */}
+                    <Col lg={8}>
+                        <div ref={ref} style={{ width: '90%', paddingLeft: '20px', paddingTop: '50px' }}>
+                            <h2 className='mb-3'>Category : <span className='txt-color-two'>{category_name}</span></h2>
+                            <h3>Course Description</h3>
+                            <p>{details}</p>
                         </div>
                     </Col>
                     <Col lg={4}>
-                        <Card className='p-2 bg-light'>
+                        <Card className='p-2 bg-light mb-5'>
                             <Card.Img variant="top" src={thumbnail_url} />
                             <Card.Body>
                                 <div>

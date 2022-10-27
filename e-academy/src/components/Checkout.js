@@ -21,7 +21,7 @@ const Checkout = () => {
     return (
         <>
             <Menubar />
-            <MiniHero title={title} />
+            <MiniHero title={'Checkout'} />
             <Container>
                 <Row>
                     <Col lg={6}>

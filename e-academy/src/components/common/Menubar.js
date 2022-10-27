@@ -74,7 +74,7 @@ const Menubar = () => {
                                                 className='border border-dark border-4'
                                                 width={'40px'}
                                                 title={user?.displayName}
-                                                alt={user?.displayName}
+                                                alt='UN'
                                                 src={user?.photoURL ? user?.photoURL : '/avater.jpg'}
                                             />
                                         </li>
