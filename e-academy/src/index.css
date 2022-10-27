@@ -21,12 +21,12 @@ a {
   text-decoration: none !important;
 }
 
-.txt-collor-two {
-  color: var(--secondary) !important;
+.txt-color-two {
+  color: var(--secondary);
 }
 
-.txt-collor-one {
-  color: var(--primary) !important;
+.txt-color-one{
+  color: var(--primary);
 }
 
 .vh-80 {

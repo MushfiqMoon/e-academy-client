@@ -11,8 +11,6 @@ const Checkout = () => {
 
     const { user } = useContext(AuthContext);
 
-    console.log(user)
-
     const courseCheckout = useLoaderData()
 
     const notify = () => toast('Yay! Thank You !!', {
@@ -27,7 +25,7 @@ const Checkout = () => {
             <Container>
                 <Row>
                     <Col lg={6}>
-                        <h2 className='txt-collor-two '>Billing Details</h2>
+                        <h2 className='txt-color-two '>Billing Details</h2>
                         <hr className='pb-5' />
                         <Image
                             roundedCircle
@@ -40,7 +38,7 @@ const Checkout = () => {
                         <h4 className='mt-3'>Varified Email : {user?.emailVerified ? <>Yes</> : <>No</>}</h4>
                     </Col>
                     <Col lg={6}>
-                        <h2 className='txt-collor-two '>Your Order</h2>
+                        <h2 className='txt-color-two '>Your Order</h2>
                         <hr className='pb-5' />
                         <Table hover >
                             <tbody>

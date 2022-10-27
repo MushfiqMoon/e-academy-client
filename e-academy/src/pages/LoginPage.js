@@ -68,7 +68,7 @@ const LoginPage = () => {
                 <Col lg="4">
                     <Card className='shadow-lg text-center'>
                         <Card.Body>
-                            <h3 className='t-primary qt-hero mb-5'>Login</h3>
+                            <h3 className='t-primary qt-hero mb-5 txt-color-one fw-bold mt-3'>Login</h3>
                             <Form onSubmit={handleSubmit}>
                                 <Form.Floating className="mb-3">
                                     <Form.Control

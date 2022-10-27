@@ -84,10 +84,18 @@ nav.navbar.navbar-light {
 
 .sidebar-list.active {
     background: var(--primary);
-    color: var(--gray);
+    color:
+    
+    var(--gray);
 }
 
-
+/* blog */
+.tag {
+    background: var(--gray);
+    color: var(--accent);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
 
 @media screen and (max-width: 992px) {
 

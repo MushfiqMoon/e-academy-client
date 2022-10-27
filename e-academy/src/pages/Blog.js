@@ -19,6 +19,11 @@ const Blog = () => {
                                 An example of a cross-origin request: the front-end JavaScript code served from https://domain-a.com uses XMLHttpRequest to make a request for https://domain-b.com/data.json.
                             </p>
                         </Col>
+                        <div>
+                            <span className="tag me-1">cors</span>
+                            <span className="tag me-1">web</span>
+                            <span className="tag me-1">devlopment</span>
+                        </div>
                     </Row>
                     <hr />
                     <Row>
@@ -45,6 +50,12 @@ const Blog = () => {
                                 <li>Supabase</li>
                             </ul>
                         </Col>
+                        <div>
+                            <span className="tag me-1">firebase</span>
+                            <span className="tag me-1">devlopment</span>
+                            <span className="tag me-1">authentication</span>
+                     
+                        </div>
                     </Row>
                     <hr />
                     <Row>
@@ -53,6 +64,11 @@ const Blog = () => {
                             <p>The react private route component renders child components (children) if the user is logged in. If not logged in the user is redirected to the /login page with the return url passed in the location state property.</p>
 
                         </Col>
+                        <div>
+                            <span className="tag me-1">route</span>
+                            <span className="tag me-1">devlopment</span>
+                     
+                        </div>
                     </Row>
                     <hr />
                     <Row>
@@ -70,6 +86,13 @@ const Blog = () => {
                                 <br />Libuv is an open-source library built-in C. It has a strong focus on asynchronous and  I/O, this gives node access to the underlying computer operating system, file system, and networking.
                             </p>
                         </Col>
+                        <div>
+                            <span className="tag me-1">node</span>
+                            <span className="tag me-1">nodeJs</span>
+                            <span className="tag me-1">javascript</span>
+                            <span className="tag me-1">devlopment</span>
+                     
+                        </div>
                     </Row>
                 </div>
             </Container>
