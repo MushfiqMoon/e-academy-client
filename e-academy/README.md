@@ -2,6 +2,9 @@
 
 E-Academy is an online Quality learning platform.
 
+## Live Link
+Hosted in Firebase -> [E-Academy](https://google.com/)
+
 ## E-Academy Key Features
 
 1. Login and Logout Functionality<br />
@@ -12,10 +15,7 @@ E-Academy is an online Quality learning platform.
 5. Dedicated Blog Page<br />
 6. Single Page Application<br />
 
-## Available Scripts
-
-### Live Link
-Hosted in Firebase -> [E-Academy](https://google.com/)
+## Dependencies
 
 ### Backend
 Backend hosted in vercel app -> [Link](https://vercel.com/)
@@ -26,13 +26,13 @@ Documentation Link -> [Link](https://reactrouter.com/en/main/start/overview)
 ### React Bootstrap v2.5.0
 Documentation Link -> [Link](https://react-bootstrap.netlify.app/)
 
-### React Icons
+### React Icons v4.6.0
 Documentation Link -> [Link](https://react-icons.github.io/react-icons)
 
-### React Hot Toast
+### React Hot Toast v2.4.0
 Documentation Link -> [Link](https://react-hot-toast.com/)
 
-### React to PDF
+### React to PDF v0.0.14
 Documentation Link -> [Link](https://www.npmjs.com/package/react-to-pdf)
 
 ### Font Nunito
