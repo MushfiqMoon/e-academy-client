@@ -21,6 +21,14 @@ a {
   text-decoration: none !important;
 }
 
+.txt-collor-two {
+  color: var(--secondary) !important;
+}
+
+.txt-collor-one {
+  color: var(--primary) !important;
+}
+
 .vh-80 {
   height: 80vh;
 }
@@ -33,4 +41,16 @@ a {
 
 .btn-secondary:hover {
   background-color: var(--secondary) !important;
+}
+
+.btn-secondary-outline {
+  background-color: #fff !important;
+  color: var(--secondary) !important;
+  border: 2px solid var(--secondary) !important;
+  padding: 10px 15px !important;
+}
+
+.btn-secondary-outline:hover {
+  background-color: var(--secondary) !important;
+  color: #fff !important;
 }
